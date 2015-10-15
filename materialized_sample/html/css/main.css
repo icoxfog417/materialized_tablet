@@ -1,0 +1,35 @@
+body {
+  margin: 4px;
+}
+
+div.title{
+    height: 60px;
+}
+
+div.container{
+    /* http://qiita.com/tonosamart/items/e7dfea02772d7ce762cf */
+    height: 1010px; /* 1019 - margin 4px*/
+    position: relative;
+}
+
+.image {
+    height: 1010px;
+    border-radius: 20px;
+}
+
+div.answer{
+    position: absolute;
+    bottom: 0px;
+    padding: 4px;
+    height: 100px;
+    width: 100%;
+    background-color: white;
+    font-size: 4em;
+}
+
+div.answer-action{
+    /* vertical-alignができないので直指定 */
+    top: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
