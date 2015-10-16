@@ -11,38 +11,45 @@
 
     <title>One to One</title>
     <script src="/libs/qimessaging/1.0/qimessaging.js"></script>
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
     <script>
+        $(function(){
+            $(".base").click(function(){
+                $(".footer").slideToggle("slow");
+            })
+            $("#yes").click(function(event){
+                console.log("yes");
+                return false;
+            })
+            $("#no").click(function(){
+                console.log("no");
+                return false;
+            })
+        })
         //your script here
     </script>
   </head>
   <body>
-    <div class="container">
-      <h2 class="title">ダイバーシティ東京</h2>
+    <div class="base">
+      <h2 id="title" class="title">ダイバーシティ東京</h2>
       <div class="content row">
           <div class="col s12">
             <div class="preview" align="center">
-              <img src="http://prtimes.jp/i/3311/77/origin/d3311-77-522340-0.jpg" class=""/>
+              <img id="image" src="http://prtimes.jp/i/3311/77/origin/d3311-77-522340-0.jpg" class="responsive-img image"/>
             </div>
           </div>
       </div>
-      <div class="answer row">
-        <div class="col s6">
-          <div class="light-blue darken-1 center-align">
-            <a class="white-text" onclick="" name="action">Yes</a>
-          </div>
+      <div class="footer row">
+        <div class="col s6 answer yes">
+          <a id="yes"></a>
         </div>
-        <div class="col s6">
-          <div class="light-blue darken-1 center-align">
-            <a class="white-text" onclick="" name="action">No</a>
-          </div>
+        <div class="col s6 answer no">
+          <a id="no"></a>
         </div>
       </div>
     </div>
     <!-- waves-effect waves-light -->
-    
-    <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
 
   </body>
 </html>
